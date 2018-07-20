@@ -29,7 +29,7 @@
                     <p>{{$todo->todo}} </p>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-danger">Delete</a>
+                    <a href="{{route('todo.delete',['id'=>$todo->id])}}" class="btn btn-danger">Delete</a>
                 </div> 
                 
             </div>
