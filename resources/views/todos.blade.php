@@ -2,13 +2,6 @@
 
 @section('contenct')
 
-        <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Todo list</h1>
-            <p class="lead">Best todo app in the universe</p>
-        </div>
-        </div>
-
         <div class="container">
             <form action="" method="POST">
             {{csrf_field()}}

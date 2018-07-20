@@ -13,6 +13,26 @@
         
     </head>
     <body>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Todo list</h1>
+                <p class="lead">Best todo app in the universe</p>
+            </div>
+        </div>
+
+        <div class="container">
+            @if(Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{Session::get('success')}}
+                </div>
+            @elseif(Session::has('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{Session::get('error')}}
+                </div>
+            @endif
+        </div>
+        
         @yield('contenct')
 
         <footer class="footer bg-light">
