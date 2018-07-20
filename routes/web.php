@@ -15,3 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/todos',[
+    'uses' =>'TodosController@index'
+]);
+
+Route::POST('/todos',[
+    'uses' =>'TodosController@add'
+]);
+
