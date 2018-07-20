@@ -20,12 +20,22 @@ Route::get('/todos',[
 ]);
 
 Route::POST('/todos',[
-    'uses' =>'TodosController@add'
+    'uses' =>'TodosController@add',
+    'as' => 'todos'
 ]);
 
 Route::get('/todo/delete/{id}',[
     'uses' => "TodosController@delete",
     'as' =>  'todo.delete'
+]);
+
+Route::get('/todo/edit/{id}',[
+    'uses' => "TodosController@edit",
+    'as' =>  'todo.edit'
+]);
+
+Route::POST('/todo/edit/{id}',[
+    'uses' => "TodosController@update",
 ]);
 
 
