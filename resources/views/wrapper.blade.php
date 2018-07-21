@@ -35,7 +35,9 @@
         
         @yield('contenct')
 
-        <footer class="footer bg-light">
+        </br>
+        
+        <footer class="footer bg-light fixed-bottom">
             <div class="container">
                 <div class="footer-copyright text-center py-3">© 2018 Copyright:
                     <a href="http://sahandcomputer.co"> sahandcomputer.co</a>
