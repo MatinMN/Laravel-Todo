@@ -42,6 +42,19 @@ class TodosController extends Controller
         return redirect()->back();
     }
 
+    public function complete($id){
+        // delete the todo with the id $id
+        $todo = Todo::find($id);
+
+        $todo->completed = 1;
+
+        $todo->save();
+        
+        Session::flash('success','Todo was marked completed succussfuly');
+
+        return redirect()->route('todos');
+    }
+
     public function edit($id){
         // edit the todo with the id $id
         $todo = Todo::find($id);

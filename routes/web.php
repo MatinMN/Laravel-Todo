@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/todos',[
+Route::get('/',[
     'uses' =>'TodosController@index'
 ]);
 
-Route::POST('/todos',[
+Route::POST('/',[
     'uses' =>'TodosController@add',
     'as' => 'todos'
 ]);
@@ -27,6 +24,11 @@ Route::POST('/todos',[
 Route::get('/todo/delete/{id}',[
     'uses' => "TodosController@delete",
     'as' =>  'todo.delete'
+]);
+
+Route::get('/todo/mark/{id}',[
+    'uses' => "TodosController@complete",
+    'as' =>  'todo.mark'
 ]);
 
 Route::get('/todo/edit/{id}',[

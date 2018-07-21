@@ -19,7 +19,13 @@
         @foreach($todos as $todo)
             <div class="row">
                 <div class="col-10">
-                    <p>{{$todo->todo}} </p>
+                    <p>
+                    @if($todo->completed)
+                    <a href="#" class="badge badge-success">Completed</a> {{$todo->todo}} 
+                    @else
+                    <a href="{{route('todo.mark',['id'=>$todo->id])}}" class="badge badge-dark">Mark as complete</a> {{$todo->todo}} 
+                    @endif
+                    </p>
                 </div>
                 <div class="col-1">
                     <a href="{{route('todo.delete',['id'=>$todo->id])}}" class="btn btn-danger">Delete</a>
