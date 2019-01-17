@@ -1,6 +1,6 @@
 ## About Todo
 
-A todo application writen with php laravel 
+A simple todo application writen with php laravel
 
 
 
